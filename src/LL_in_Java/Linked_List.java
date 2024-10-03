@@ -96,6 +96,25 @@ public class Linked_List {
         length--;
     }
 
+    public void pop_first(){
+        if (length == 0) {
+           System.out.println("...Empty...");
+        }
+
+        if (length ==1 ) {
+            head = null;
+            tail = null;
+        }
+        else{
+            Node temp;
+            temp = head;
+            head = head.next;
+            temp.next = null;
+        }
+        length--;
+       
+    }
+
 
 
     
