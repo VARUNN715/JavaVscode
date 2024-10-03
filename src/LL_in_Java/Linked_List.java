@@ -76,29 +76,27 @@ public class Linked_List {
 
     public void pop() {
         if (length == 0) {
-            System.out.println("Empty");
-            return; // Exit the method if the list is empty
+            System.out.println("....Empty....");
+            return;
         }
-    
         if (length == 1) {
-            // If there's only one node, set head and tail to null
             head = null;
             tail = null;
-        } else {
+        }
+        else{
             Node pre = null;
             Node temp = head;
-    
             while (temp.next != null) {
                 pre = temp;
                 temp = temp.next;
             }
-    
-            // Update tail and remove the last node
             tail = pre;
             tail.next = null;
         }
-    
         length--;
     }
+
+
+
     
 }
