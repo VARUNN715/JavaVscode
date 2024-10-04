@@ -1,25 +1,23 @@
 package Dsa_in_Java;
 import java.util.Scanner;
+import javax.swing.JOptionPane;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        
 
         int choice;
         Stacks myStack = new Stacks();
 
         do{
-            System.out.println("Enter your choice: ");
-            System.out.println("1 Push");
-            System.out.println("2 Pop");
-            System.out.println("3 Display");
-            System.out.println("4 Exit");
-            choice = sc.nextInt();
+            choice = Integer.parseInt(JOptionPane.showInputDialog("Enter your choice: \n 1: push\n 2 pop \n 3 display \n 4 exit\n"));
+            
+            
 
             switch (choice) {
                 case 1:
-                        int newItem;
-                        System.out.println("Enter the element to push: ");
-                        newItem = sc.nextInt();
+                        int newItem = Integer.parseInt(JOptionPane.showInputDialog("Enter the element to be pushed: "));
+                        
                         myStack.push(newItem);
                         break;
                 case 2:
@@ -31,10 +29,10 @@ public class Main {
                         break;
 
                 case 4:
-                        System.out.println(".....Exiting.....");
+                        JOptionPane.showMessageDialog(null, "...Exit...");
                         break;
                 default:
-                        System.out.println("......Invalid input......");
+                        JOptionPane.showMessageDialog(null, "....Invalid Input....");
                         break;
             }
 
@@ -42,4 +40,6 @@ public class Main {
 
         sc.close();
     }
+
+
 }

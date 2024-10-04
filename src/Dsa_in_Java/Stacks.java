@@ -11,7 +11,7 @@ public class Stacks {
     }
 
     public void push(int newItem){
-        if (top>= MAX) {
+        if (top>= MAX-1) {
             System.out.println("stack Overflow condition");
         }
         else{

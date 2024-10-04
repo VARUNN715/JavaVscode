@@ -50,7 +50,7 @@ public class Linked_List {
     public void display(){
         Node temp = head;
 
-        if (head == null) {
+        if (head == null && tail == null) {
             System.out.println("No items to display");
         }
         
@@ -97,21 +97,21 @@ public class Linked_List {
     }
 
     public void pop_first(){
-        if (length == 0) {
-           System.out.println("...Empty...");
-        }
-
-        if (length ==1 ) {
+       if (length == 0) {
+            System.out.println("...Empty...");
+            return;
+       }
+       if (length == 1) {
             head = null;
             tail = null;
-        }
-        else{
+       }
+       else{
             Node temp;
             temp = head;
             head = head.next;
             temp.next = null;
-        }
-        length--;
+       }
+       length--;
        
     }
 
