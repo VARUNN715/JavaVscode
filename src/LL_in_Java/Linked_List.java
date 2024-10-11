@@ -60,7 +60,6 @@ public class Linked_List {
         }
         System.out.println();
     }
-   
 
     public void prepend(int value){
         Node newNode = new Node(value);
@@ -111,11 +110,7 @@ public class Linked_List {
             head = head.next;
             temp.next = null;
        }
-       length--;
-       
+       length--;       
     }
-
-
-
     
 }

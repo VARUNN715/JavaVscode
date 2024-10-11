@@ -6,7 +6,8 @@ public class Main {
         myLL.append(2);
         myLL.append(3);
         myLL.append(4);
-        
+        myLL.append(5);
+        myLL.pop();
         myLL.printList();
     }
     
