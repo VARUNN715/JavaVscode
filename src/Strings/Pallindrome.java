@@ -6,17 +6,32 @@ public class Pallindrome {
     }
 
     public static boolean isPallindrome(String str){
-        int flag = 0;
-        for (int i = 0; i < str.length(); i++) {
-            if (str.charAt(i) == str.charAt(str.length()-i-1)) {
-                flag = 1;
+        // int flag = 0;
+        // for (int i = 0; i < str.length(); i++) {
+        //     if (str.charAt(i) == str.charAt(str.length()-i-1)) {
+        //         flag = 1;
+        //     }
+        // }
+        // if (flag == 1) {
+        //     return true;
+        // }
+        // else{
+        //     return false;
+        // }
+
+        //using two pointers
+
+        int left = 0;
+        int right = str.length()-1;
+
+        while (left < right) {
+            if (str.charAt(left) != str.charAt(right)) {
+                return false;
             }
+            left++;
+            right--;
         }
-        if (flag == 1) {
-            return true;
-        }
-        else{
-            return false;
-        }
+        return true;
+
     }
 }
