@@ -21,17 +21,17 @@ public class Pallindrome {
 
         //using two pointers
 
-        int left = 0;
-        int right = str.length()-1;
-
-        while (left < right) {
-            if (str.charAt(left) != str.charAt(right)) {
+       int l=0; 
+       int r = str.length()-1;
+        
+        while(l<r){
+            if (str.charAt(l) != str.charAt(r)) {
                 return false;
             }
-            left++;
-            right--;
+            l++;
+            r--;
         }
+        
         return true;
-
     }
 }

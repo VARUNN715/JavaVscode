@@ -8,24 +8,20 @@ import java.util.Map;
 public class Remove_dupl_char {
     public static void main(String[] args) {
         String str = "Hello World";
+        StringBuffer sb = new StringBuffer();
         
-        Map<Character,Integer> charCount = new HashMap<>();
-
+        Map<Character,Integer> map = new HashMap<Character,Integer>();
         char[] charArr = str.toCharArray();
-        List<Character> str1 = new LinkedList<>();
-        StringBuilder result = new StringBuilder();
 
-        for(char c : charArr){
-            if (charCount.containsKey(c)) {
-                charCount.put(c,charCount.get(c)+1);
-                //charCount.remove(c);
+        for (char c : charArr) {
+            if (map.containsKey(c)) {
+                map.put(c, map.get(c)+1);
             }
             else{
-                charCount.put(c,1);
-                result.append(c);
-                str1.add(c);
+                map.put(c, 1);
+                sb.append(c);
             }
         }
-        System.out.println(str1);
+        System.out.println(sb.toString());
     }
 }
