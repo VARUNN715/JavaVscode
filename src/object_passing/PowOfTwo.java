@@ -2,7 +2,7 @@ package object_passing;
 
 public class PowOfTwo {
     public static void main(String[] args) {
-        System.out.println(PowOfTwo(32));
+        System.out.println(PowOfTwo(512));
     }   
     
     public static boolean PowOfTwo(int n){
